@@ -1,0 +1,1 @@
+/home/russich555/.bashrc
