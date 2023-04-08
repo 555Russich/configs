@@ -1,4 +1,4 @@
-" location is ~/.vimrc
+" location is ~/.vimrc :)
 
 set number
 set relativenumber
