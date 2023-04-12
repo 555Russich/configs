@@ -10,7 +10,6 @@ set expandtab
 set softtabstop=4
 set mouse=a
 set hlsearch
-set colorcolumn=120
 
 inoremap jk <esc>
 
@@ -46,12 +45,17 @@ colorscheme darcula
 " vim-airline customization
 let g:airline#extensions#tabline#enabled = 1
 
+:augroup PyFiles
+:   autocmd!
+:   autocmd BufRead,BufNewfile   *.py set colorcolumn=120
+:augroup END
+
 " Tag Bar
 "" let g:tagbar_ctags_bin
 "" nmap <F8> :TagbarToggle<CR>
 
 
-" coc.nvim configuration
+" coc.nvim configuration STARTS
 
 " May need for vim (not neovim) since coc.nvim calculate byte offset by count
 " utf-8 byte sequence.
