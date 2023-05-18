@@ -1,4 +1,5 @@
 " location is ~/.vimrc :)
+" CocInstall coc-pyright
 
 set number
 set relativenumber
@@ -37,10 +38,17 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'elzr/vim-json'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
 
 call plug#end()
 
 colorscheme darcula
+
+" Netrw file explorer settings
+let g:netrw_banner = 0 " hide banner above files
+let g:netrw_liststyle = 3 " tree instead of plain view
+let g:netrw_browse_split = 3 " open file in new tab 
 
 " vim-airline customization
 let g:airline#extensions#tabline#enabled = 1
